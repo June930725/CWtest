@@ -6,9 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
   </head>
   <body>
-    <header id="navbar"></header>
+    <header id="navbar">
+      <div class="navLogo">
+        <a href="#"> <img src="./images/logo.svg" />熊厲害</a>
+      </div>
+      <nav class="navMenu">
+        <label for="burger">
+          <i class="fas fa-bars"></i>
+        </label>
+        <input type="checkbox" id="burger" />
+        <ul class="menu">
+          <li><a href="#news">最新消息</a></li>
+          <li><a href="#member">團隊成員</a></li>
+          <li><a href="#memorabilia">大事記</a></li>
+          <li>
+            <a href="https://facebook.com/">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://line.me/zh-hant/">
+              <i class="fab fa-line"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <section id="mainPic"></section>
     <section id="news"></section>
     <section id="team"></section>
