@@ -42,3 +42,15 @@ $breakpoint-sm: 576px;
 body {
   background: $color1;
 }
+
+#footer {
+  width: 100%;
+  height: 50px;
+  padding: 0 80px;
+  font-weight: 300;
+  color: white;
+  background: $color2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
