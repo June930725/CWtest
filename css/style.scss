@@ -1,0 +1,44 @@
+// 自訂參數
+$color1: #f2f2f2;
+$color2: #73bfa3;
+$color3: #038c65;
+$color4: #f2ae2e;
+$color5: #f2780c;
+
+// RWD 斷點
+$breakpoint-sm: 576px;
+// $breakpoint-md: 768px;
+// $breakpoint-lg: 992px;
+
+@mixin sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// ---
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: '微軟正黑體';
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: $color1;
+}
