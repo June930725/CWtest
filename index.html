@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <!-- fontawesome -->
     <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
   </head>
   <body>
     <header id="navbar">
@@ -44,17 +46,58 @@
       </div>
     </section>
     <section id="news">
-      <h1>最新消息</h1>
+      <div class="container">
+        <h1>最新消息</h1>
+      </div>
     </section>
     <section id="team">
-      <h1>團隊成員</h1>
+      <div class="container">
+        <h1>團隊成員</h1>
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/doctor.jpg" class="doctor" />
+              <h3>熊蓋讚</h3>
+              <p class="major">營養師</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/doctor.jpg" class="doctor" />
+              <h3>口袋熊</h3>
+              <p class="major">駐站醫師</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/doctor.jpg" class="doctor" />
+              <h3>熊健康</h3>
+              <p class="major">創辦人</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/doctor.jpg" class="doctor" />
+              <h3>熊愛水</h3>
+              <p class="major">瑜珈老師</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/doctor.jpg" class="doctor" />
+              <h3>熊舒適</h3>
+              <p class="major">體適能教練</p>
+            </div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
     </section>
     <section id="memorabilia">
-      <h1>大事記</h1>
+      <div class="container">
+        <h1>大事記</h1>
+      </div>
     </section>
     <footer id="footer">
       <span>Copyright Ⓒ 2021 熊厲害. All rights reserved. 版權所有，禁止擅自轉貼節錄 </span>
     </footer>
   </body>
+  <!-- Swiper JS -->
+  <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/index.js"></script>
 </html>

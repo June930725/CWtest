@@ -8,7 +8,7 @@ $color5: #f2780c;
 // RWD 斷點
 $breakpoint-sm: 576px;
 // $breakpoint-md: 768px;
-// $breakpoint-lg: 992px;
+$breakpoint-lg: 992px;
 
 @mixin sm {
   @media (min-width: $breakpoint-sm) {
@@ -16,11 +16,11 @@ $breakpoint-sm: 576px;
   }
 }
 
-@mixin md {
-  @media (min-width: $breakpoint-md) {
-    @content;
-  }
-}
+// @mixin md {
+//   @media (min-width: $breakpoint-md) {
+//     @content;
+//   }
+// }
 
 @mixin lg {
   @media (min-width: $breakpoint-lg) {
@@ -41,6 +41,12 @@ $breakpoint-sm: 576px;
 
 body {
   background: $color1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: #eee;
 }
 
 h1 {
@@ -188,8 +194,49 @@ h1 {
 
 #team {
   width: 100%;
-  height: 100vh;
+  padding-bottom: 2rem;
   background: #aaa;
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: block;
+    align-items: center;
+  }
+
+  .swiper-button-next {
+    display: block;
+  }
+
+  .swiper-button-prev {
+    display: block;
+  }
+
+  /* 電腦尺寸 */
+  @include lg {
+    .swiper-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .swiper-slide {
+      width: 200px;
+      // display: flexbox;
+    }
+
+    .swiper-button-next {
+      display: none;
+    }
+
+    .swiper-button-prev {
+      display: none;
+    }
+  }
 }
 
 #memorabilia {
