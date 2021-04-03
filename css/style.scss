@@ -45,6 +45,7 @@ body {
 
 .container {
   max-width: 1200px;
+
   margin: auto;
   background: #eee;
   padding: 2rem 0;
@@ -200,7 +201,6 @@ h1 {
     border: 1px solid $color3;
     border-radius: 0.25rem;
 
-
     .newsDate {
       width: 30%;
       display: inline-block;
@@ -251,7 +251,7 @@ h1 {
 
 #team {
   width: 100%;
-  background: #eee;
+  background: #ccc;
 
   .swiper-container {
     width: 100%;
@@ -297,8 +297,130 @@ h1 {
 
 #memorabilia {
   width: 100%;
-  height: 100vh;
   background: #ccc;
+
+  .timeline {
+    width: 80%;
+    margin: auto;
+    position: relative;
+  }
+
+  .point1,
+  .point2,
+  .point3,
+  .point4 {
+    padding: 0.5rem 1rem;
+    margin: auto;
+    border-left: 0.16rem solid $color3;
+    background: rgb(202, 168, 153);
+  }
+
+  .point1::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: $color3;
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+  }
+
+  .point2::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: $color3;
+    position: absolute;
+    top: 4.1rem;
+    left: -0.5rem;
+  }
+
+  .point3::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: $color3;
+    position: absolute;
+    top: 8.7rem;
+    left: -0.5rem;
+  }
+
+  .point4::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: $color3;
+    position: absolute;
+    top: 13.3rem;
+    left: -0.5rem;
+  }
+
+  .lg-text {
+    display: none;
+  }
+
+  @include lg {
+    .timeline {
+      min-height: 370px;
+    }
+
+    .point1,
+    .point3 {
+      width: calc(25% - 0.25rem);
+      border-left: 0rem;
+      border-bottom: 0.16rem solid $color3;
+      display: inline-block;
+    }
+
+    .point2,
+    .point4 {
+      width: calc(25% - 0.25rem);
+      border-left: 0rem;
+      border-top: 0.16rem solid $color3;
+      display: inline-block;
+      position: relative;
+      top: 9.4rem;
+    }
+    .point4 {
+      top: 10.7rem;
+    }
+
+    .point1::before {
+      content: '';
+      position: absolute;
+      top: 10.2rem;
+      left: -0.5rem;
+    }
+
+    .point2::before {
+      content: '';
+      position: absolute;
+      top: -0.6rem;
+      left: -0.5rem;
+    }
+
+    .point3::before {
+      content: '';
+      position: absolute;
+      top: 10.2rem;
+      left: 28rem;
+    }
+
+    .point4::before {
+      content: '';
+      position: absolute;
+      top: -0.6rem;
+      left: -0.5rem;
+    }
+
+    .lg-text {
+      display: block;
+    }
+  }
 }
 
 #footer {
