@@ -224,8 +224,12 @@ h1 {
       display: inline-block;
       margin-bottom: 0.5rem;
     }
+  }
 
-    @include sm {
+  @include lg {
+    .box {
+      width: 90%;
+
       .newsDate {
         width: 15%;
         margin: 1rem 0;
@@ -276,6 +280,7 @@ h1 {
   /* 電腦尺寸 */
   @include lg {
     .swiper-container {
+      width: 90%;
       display: flex;
       justify-content: center;
     }
@@ -365,7 +370,8 @@ h1 {
 
   @include lg {
     .timeline {
-      min-height: 370px;
+      width: 90%;
+      min-height: 300px;
     }
 
     .point1,
@@ -383,16 +389,14 @@ h1 {
       border-top: 0.16rem solid $color3;
       display: inline-block;
       position: relative;
-      top: 9.4rem;
+      top: 7.4rem;
     }
-    .point4 {
-      top: 10.7rem;
-    }
+  
 
     .point1::before {
       content: '';
       position: absolute;
-      top: 10.2rem;
+      top: 8.8rem;
       left: -0.5rem;
     }
 
@@ -406,8 +410,8 @@ h1 {
     .point3::before {
       content: '';
       position: absolute;
-      top: 10.2rem;
-      left: 28rem;
+      top: 8.8rem;
+      left: 33rem;
     }
 
     .point4::before {
