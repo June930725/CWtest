@@ -1,7 +1,9 @@
 // 自訂參數
 $color1: #f2f2f2;
-$color2: #73bfa3;
-$color3: #038c65;
+// $color2: #73bfa3;
+// $color3: #038c65;
+$color2: #bda99f;
+$color3: #867369;
 $color4: #f2ae2e;
 $color5: #f2780c;
 
@@ -267,6 +269,13 @@ h1 {
     /* Center slide text vertically */
     display: block;
     align-items: center;
+
+    img {
+      margin-bottom: .5rem;
+      background: rgba(189, 169, 159,.5);
+      border-radius: 50%;
+      max-height: 200px;
+    }
   }
 
   .swiper-button-next {
@@ -393,7 +402,6 @@ h1 {
       position: relative;
       top: 7.4rem;
     }
-  
 
     .point1::before {
       content: '';
