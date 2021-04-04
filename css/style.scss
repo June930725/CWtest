@@ -3,9 +3,12 @@ $color1: #f2f2f2;
 // $color2: #73bfa3;
 // $color3: #038c65;
 $color2: #bda99f;
-$color3: #867369;
-$color4: #f2ae2e;
-$color5: #f2780c;
+$color3: #74645b;
+$color4: rgb(59, 48, 42);
+$color5: rgb(255, 114, 94);
+// $color5: #f2780c;
+$color6: rgb(69, 90, 100);
+$color7: rgb(242, 174, 46);
 
 // RWD 斷點
 $breakpoint-sm: 576px;
@@ -36,38 +39,34 @@ $breakpoint-lg: 992px;
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: '微軟正黑體';
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
   text-decoration: none;
   box-sizing: border-box;
 }
 
-body {
-  background: $color1;
-}
-
 .container {
   max-width: 1200px;
-
   margin: auto;
-  background: #eee;
+  // background: #eee;
   padding: 2rem 0;
 }
 
 h1 {
   padding-bottom: 1.5rem;
   color: $color5;
-  font-size: 2.5rem;
-  font-weight: 900;
+  font-size: 2rem;
+  font-weight: 600;
   text-align: center;
 }
 
 #navbar {
   width: 100%;
   height: 50px;
-  background: $color2;
+  background: #fff;
   position: fixed;
   top: 0;
   left: 0;
+  box-shadow: 0 0.5rem 1rem $color1;
 
   .navLogo {
     width: 180px;
@@ -76,13 +75,13 @@ h1 {
 
     a {
       height: 100%;
-      color: white;
+      color: $color3;
       font-size: 2rem;
-      font-weight: 900;
+      font-weight: 700;
       display: flex;
       align-items: center;
       img {
-        height: 30px;
+        height: 45px;
         margin: 0 5px 0 15px;
       }
     }
@@ -93,10 +92,6 @@ h1 {
     height: 100%;
     float: right;
 
-    @include sm {
-      //
-    }
-
     /* 漢堡按鈕 */
     label {
       height: 50px;
@@ -106,7 +101,7 @@ h1 {
       i {
         font-size: 2rem;
         width: 40px;
-        color: $color3;
+        color: $color2;
         float: right;
         line-height: 50px;
         margin: 0 10px 0;
@@ -119,21 +114,21 @@ h1 {
 
     /* menu */
     .menu {
-      background: $color2;
+      background: #fff;
 
       li {
         font-size: 1rem;
         text-align: center;
-        border-bottom: 1px solid $color1;
+        border-bottom: 1px solid #ddd;
 
         a {
           display: block;
           line-height: 50px;
           font-size: 18px;
-          color: $color1;
+          color: $color3;
 
           &:hover {
-            background: $color3;
+            background: $color1;
           }
         }
       }
@@ -191,7 +186,7 @@ h1 {
 
 #news {
   width: 100%;
-  background: #ccc;
+  background: $color1;
 
   .box {
     width: 80%;
@@ -204,16 +199,15 @@ h1 {
 
     .newsDate {
       width: 30%;
-      display: inline-block;
       margin-top: 0.5rem;
-      background: red;
+      color: $color2;
+      display: inline-block;
     }
 
     .newsCategory {
       width: calc(70% - 1rem);
       margin-top: 0.5rem;
       display: inline-block;
-      background: burlywood;
 
       img {
         height: 1rem;
@@ -235,14 +229,12 @@ h1 {
         width: 15%;
         margin: 1rem 0;
         display: inline-block;
-        background: red;
       }
 
       .newsCategory {
-        width: 20%;
+        width: 15%;
         margin: 1rem 0;
         display: inline-block;
-        background: burlywood;
       }
 
       .newsContent {
@@ -256,7 +248,11 @@ h1 {
 
 #team {
   width: 100%;
-  background: #ccc;
+
+  h2 {
+    color: $color4;
+    font-size: 1.25rem;
+  }
 
   .swiper-container {
     width: 80%;
@@ -271,8 +267,9 @@ h1 {
     align-items: center;
 
     img {
-      margin-bottom: .5rem;
-      background: rgba(189, 169, 159,.5);
+      margin-bottom: 0.5rem;
+      // filter: drop-shadow(3px 0px 3px rgba(59, 48, 42, 0.3));
+      background: rgba(189, 169, 159, 0.4);
       border-radius: 50%;
       max-height: 200px;
     }
@@ -313,7 +310,7 @@ h1 {
 
 #memorabilia {
   width: 100%;
-  background: #ccc;
+  background: #eee;
 
   .timeline {
     width: 80%;
@@ -327,8 +324,7 @@ h1 {
   .point4 {
     padding: 0.5rem 1rem;
     margin: auto;
-    border-left: 0.16rem solid $color3;
-    background: rgb(202, 168, 153);
+    border-left: 0.16rem solid $color5;
   }
 
   .point1::before {
@@ -336,7 +332,7 @@ h1 {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: $color3;
+    background: $color5;
     position: absolute;
     top: -0.5rem;
     left: -0.5rem;
@@ -347,7 +343,7 @@ h1 {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: $color3;
+    background: $color5;
     position: absolute;
     top: 4.1rem;
     left: -0.5rem;
@@ -358,7 +354,7 @@ h1 {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: $color3;
+    background: $color5;
     position: absolute;
     top: 8.7rem;
     left: -0.5rem;
@@ -369,10 +365,26 @@ h1 {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: $color3;
+    background: $color5;
     position: absolute;
     top: 13.3rem;
     left: -0.5rem;
+  }
+
+  h3 {
+    color: $color2;
+    font-weight: 400;
+  }
+
+  h2 {
+    color: $color4;
+    font-size: 1.25rem;
+  }
+
+  .year,
+  .event {
+    position: relative;
+    top: -1.25rem;
   }
 
   .lg-text {
@@ -389,7 +401,7 @@ h1 {
     .point3 {
       width: calc(25% - 0.25rem);
       border-left: 0rem;
-      border-bottom: 0.16rem solid $color3;
+      border-bottom: 0.16rem solid $color5;
       display: inline-block;
     }
 
@@ -397,21 +409,23 @@ h1 {
     .point4 {
       width: calc(25% - 0.25rem);
       border-left: 0rem;
-      border-top: 0.16rem solid $color3;
+      border-top: 0.16rem solid $color5;
       display: inline-block;
       position: relative;
-      top: 7.4rem;
+      top: 7.75rem;
     }
 
     .point1::before {
       content: '';
+      background: $color5;
       position: absolute;
-      top: 8.8rem;
+      top: 7.25rem;
       left: -0.5rem;
     }
 
     .point2::before {
       content: '';
+      background: $color5;
       position: absolute;
       top: -0.6rem;
       left: -0.5rem;
@@ -419,16 +433,24 @@ h1 {
 
     .point3::before {
       content: '';
+      background: $color5;
       position: absolute;
-      top: 8.8rem;
+      top: 7.25rem;
       left: 33rem;
     }
 
     .point4::before {
       content: '';
+      background: $color5;
       position: absolute;
       top: -0.6rem;
       left: -0.5rem;
+    }
+
+    .year,
+    .event {
+      position: relative;
+      top: 0;
     }
 
     .lg-text {
@@ -440,8 +462,10 @@ h1 {
 #footer {
   width: 100%;
   height: 50px;
-  padding: 0 80px;
-  font-weight: 300;
+  padding: 0 60px;
+  font-weight: 100;
+  letter-spacing: 0.05rem;
+  text-align: center;
   color: white;
   background: $color2;
   display: flex;
