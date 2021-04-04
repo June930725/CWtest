@@ -150,7 +150,6 @@ h1 {
       max-height: 300px;
     }
 
-    /* 電腦尺寸 */
     @include sm {
       label {
         display: none;
@@ -258,8 +257,9 @@ h1 {
   background: #ccc;
 
   .swiper-container {
-    width: 100%;
+    width: 80%;
     height: 100%;
+    margin: auto;
   }
 
   .swiper-slide {
@@ -271,10 +271,12 @@ h1 {
 
   .swiper-button-next {
     display: block;
+    color: $color3;
   }
 
   .swiper-button-prev {
     display: block;
+    color: $color3;
   }
 
   /* 電腦尺寸 */
