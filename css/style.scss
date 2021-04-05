@@ -401,7 +401,14 @@ h1 {
   @include lg {
     .timeline {
       width: 90%;
-      min-height: 300px;
+      min-height: 250px;
+    }
+
+    .point1,
+    .point2,
+    .point3,
+    .point4 {
+      padding-left: 0.2rem;
     }
 
     .point1,
