@@ -5,7 +5,7 @@ $color1: #f2f2f2;
 $color2: #bda99f;
 $color3: #74645b;
 $color4: #3b302a;
-$color5: rgb(255, 114, 94);
+$color5: #ff725e;
 // $color5: #f2780c;
 $color6: rgb(69, 90, 100);
 $color7: #f2ae2e;
@@ -47,7 +47,6 @@ $breakpoint-lg: 992px;
 .container {
   max-width: 1200px;
   margin: auto;
-  // background: #eee;
   padding: 2rem 0;
 }
 
@@ -179,15 +178,86 @@ h1 {
 
 #mainPic {
   margin-top: 50px;
-  img {
+  height: 100%;
+  min-height: 450px;
+  background: #fff;
+
+  .main01 {
+    display: none;
+  }
+
+  .main02 {
     width: 100%;
-    height: 100%;
+    display: block;
     float: left;
   }
+
   .mainText {
-    width: 100%;
-    padding: 0 50px 40px;
-    background: #fff;
+    width: 80%;
+    height: 100%;
+    padding: 1rem 1rem;
+    margin: 0 auto;
+    color: $color4;
+
+    z-index: 10;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 2rem;
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  @include lg {
+    .main01 {
+      width: 100%;
+      display: block;
+    }
+
+    .main02 {
+      display: none;
+    }
+
+    .mainText {
+      width: 40%;
+      max-width: 500px;
+      height: 450px;
+      padding: 3rem 0;
+      color: $color4;
+
+      z-index: 10;
+      position: absolute;
+      top: 50px;
+      left: 52%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+    }
   }
 }
 
