@@ -4,7 +4,7 @@ $color1: #f2f2f2;
 // $color3: #038c65;
 $color2: #bda99f;
 $color3: #74645b;
-$color4: rgb(59, 48, 42);
+$color4: #3b302a;
 $color5: rgb(255, 114, 94);
 // $color5: #f2780c;
 $color6: rgb(69, 90, 100);
@@ -66,7 +66,8 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0 0.5rem 1rem $color1;
+  // box-shadow: 0 0.5rem 1rem $color1;
+  z-index: 1000;
 
   .navLogo {
     width: 180px;
@@ -80,6 +81,7 @@ h1 {
       font-weight: 700;
       display: flex;
       align-items: center;
+
       img {
         height: 45px;
         margin: 0 5px 0 15px;
@@ -117,14 +119,13 @@ h1 {
       background: #fff;
 
       li {
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
-        border-bottom: 1px solid #ddd;
+        // border-bottom: 1px solid #ddd;
 
         a {
           display: block;
           line-height: 50px;
-          font-size: 18px;
           color: $color3;
 
           &:hover {
@@ -136,9 +137,11 @@ h1 {
 
     /* 下拉選單 */
     .menu {
-      width: 200px;
-      float: right;
+      width: 100vw;
       max-height: 0;
+      position: absolute;
+      top: 50px;
+      left: 0;
       overflow: hidden;
       transition: 0.25s;
     }
@@ -153,13 +156,17 @@ h1 {
       }
 
       .menu {
-        width: 480px;
+        width: 450px;
         float: right;
-        clear: none;
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
         max-height: 50px;
 
         li {
           display: inline-block;
+          font-size: 1.1rem;
 
           a {
             padding: 0 20px;
