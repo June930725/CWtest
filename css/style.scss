@@ -8,7 +8,7 @@ $color4: rgb(59, 48, 42);
 $color5: rgb(255, 114, 94);
 // $color5: #f2780c;
 $color6: rgb(69, 90, 100);
-$color7: rgb(242, 174, 46);
+$color7: #f2ae2e;
 
 // RWD 斷點
 $breakpoint-sm: 576px;
@@ -202,15 +202,18 @@ h1 {
       margin-top: 0.5rem;
       color: $color2;
       display: inline-block;
+      position: relative;
+      top: -0.2rem;
     }
 
     .newsCategory {
       width: calc(70% - 1rem);
       margin-top: 0.5rem;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
 
       img {
-        height: 1rem;
+        height: 1.25rem;
       }
     }
 
@@ -218,6 +221,9 @@ h1 {
       width: 100%;
       display: inline-block;
       margin-bottom: 0.5rem;
+      color: $color4;
+      font-size: 1rem;
+      font-weight: 500;
     }
   }
 
@@ -234,13 +240,14 @@ h1 {
       .newsCategory {
         width: 15%;
         margin: 1rem 0;
-        display: inline-block;
       }
 
       .newsContent {
         width: calc(65% - 1rem);
         display: inline-block;
         margin: 1rem 0;
+        position: relative;
+        top: -0.2rem;
       }
     }
   }
