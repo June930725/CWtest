@@ -327,6 +327,10 @@ h1 {
         top: -0.2rem;
       }
     }
+
+    .box:hover {
+      background: rgb(230, 230, 230);
+    }
   }
 }
 
@@ -380,6 +384,13 @@ h1 {
     .swiper-slide {
       width: 200px;
       // display: flexbox;
+      &:hover {
+        img {
+          background: $color2;
+          border-radius: 20%;
+          transition: 0.5s linear;
+        }
+      }
     }
 
     .swiper-button-next {
@@ -554,7 +565,7 @@ h1 {
   width: 100%;
   height: 50px;
   padding: 0 60px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 100;
   letter-spacing: 0.05rem;
   text-align: center;
