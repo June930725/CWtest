@@ -16,3 +16,7 @@ var swiper = new Swiper('.swiper-container', {
   }
 })
 
+// wow
+new WOW().init();
+
+
